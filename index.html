@@ -1,0 +1,1698 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Barros Filhos Consultoria e Contabilidade - Serviços contábeis, consultoria empresarial, tributária e gestão em Aracaju - Sergipe.">
+    <meta name="keywords" content="contabilidade Aracaju, contador Aracaju, consultoria contábil, consultoria tributária, Barros Filhos Consultoria">
+    <meta name="author" content="Barros Filhos Consultoria e Contabilidade LTDA">
+
+    <title>Barros Filhos Consultoria | Contabilidade e Gestão</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b1f3a;
+            --primary-light: #123866;
+            --secondary: #c99a3d;
+            --secondary-light: #e3bd67;
+            --light: #f5f7fa;
+            --dark: #142033;
+            --text: #596579;
+            --white: #ffffff;
+            --border: #e8edf3;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .navbar {
+            background: rgba(11, 31, 58, .98);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: #fff;
+            font-size: 21px;
+        }
+
+        .navbar .nav-link {
+            color: rgba(255,255,255,.85);
+            margin-left: 12px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-light);
+        }
+
+        .btn-gold {
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            padding: 12px 23px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-gold:hover {
+            background: #ae812d;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: #fff;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(6,22,43,.97) 0%, rgba(11,31,58,.88) 50%, rgba(11,31,58,.70) 100%),
+                url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=85')
+                center/cover;
+            color: #fff;
+            padding: 100px 0 80px;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.08;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-light);
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 650px;
+            color: rgba(255,255,255,.82);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,154,61,.14);
+            border: 1px solid rgba(227,189,103,.4);
+            color: var(--secondary-light);
+            border-radius: 50px;
+            padding: 8px 16px;
+            margin-bottom: 22px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,.8);
+            font-size: 14px;
+        }
+
+        .hero-info-item i {
+            color: var(--secondary-light);
+            font-size: 19px;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-title .small-title {
+            color: var(--secondary);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            line-height: 1.8;
+        }
+
+        /* ABOUT */
+        .about-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 12px 35px rgba(15, 35, 60, .06);
+        }
+
+        .about-highlight {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-highlight::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+            right: -50px;
+            bottom: -70px;
+        }
+
+        .about-highlight h3 {
+            color: #fff;
+        }
+
+        .about-highlight p {
+            color: rgba(255,255,255,.75);
+            line-height: 1.8;
+        }
+
+        .check-list {
+            padding: 0;
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .check-list i {
+            color: var(--secondary);
+            font-size: 20px;
+        }
+
+        /* SERVICES */
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(12, 31, 58, .10);
+            border-color: rgba(201,154,61,.35);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(201,154,61,.12);
+            color: var(--secondary);
+            border-radius: 13px;
+            font-size: 27px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* STATS */
+        .stats {
+            background: var(--primary);
+            color: #fff;
+            padding: 65px 0;
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,.12);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat i {
+            color: var(--secondary-light);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .stat h3 {
+            color: #fff;
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+
+        .stat p {
+            margin: 0;
+            color: rgba(255,255,255,.65);
+            font-size: 14px;
+        }
+
+        /* CNAE */
+        .cnae-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            height: 100%;
+        }
+
+        .cnae-number {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 11px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .cnae-card h5 {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* PROCESS */
+        .process-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 35px;
+        }
+
+        .process-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .process-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 23px;
+            top: 48px;
+            height: 55px;
+            border-left: 1px dashed #cbd3dd;
+        }
+
+        /* CTA */
+        .cta {
+            background:
+                linear-gradient(100deg, rgba(11,31,58,.98), rgba(18,56,102,.94)),
+                url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1800&q=80')
+                center/cover;
+            color: #fff;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.75);
+            max-width: 700px;
+            margin: 15px auto 30px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            min-width: 45px;
+            width: 45px;
+            height: 45px;
+            background: rgba(201,154,61,.12);
+            color: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-item h6 {
+            margin-bottom: 4px;
+            color: var(--dark);
+        }
+
+        .contact-item p,
+        .contact-item a {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .map-box {
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 420px;
+            background: #e9edf2;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            border: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #071528;
+            color: rgba(255,255,255,.6);
+            padding: 55px 0 25px;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        footer p,
+        footer li,
+        footer a {
+            font-size: 13px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.6);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--secondary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 35px;
+            padding-top: 20px;
+        }
+
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 8px;
+            margin-right: 7px;
+            transition: .3s;
+        }
+
+        .social-icon:hover {
+            background: var(--secondary);
+            color: #fff;
+            border-color: var(--secondary);
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 991px) {
+            .navbar .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.12);
+                padding: 20px 0;
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero {
+                padding: 90px 0 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            <span class="brand-icon">
+                <i class="bi bi-bar-chart-fill"></i>
+            </span>
+
+            <span>
+                Barros Filhos
+                <small class="d-block fw-normal opacity-75" style="font-size:10px;">
+                    CONSULTORIA & CONTABILIDADE
+                </small>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#atividades">Atividades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="#contato" class="btn btn-gold">
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Contabilidade e Consultoria Empresarial
+                </div>
+
+                <h1>
+                    Seu negócio merece uma
+                    <span>gestão inteligente.</span>
+                </h1>
+
+                <p>
+                    Soluções contábeis, tributárias e empresariais para
+                    transformar números em decisões estratégicas e ajudar
+                    sua empresa a crescer com segurança.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="#servicos" class="btn btn-gold btn-lg">
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#contato" class="btn btn-outline-light-custom btn-lg">
+                        Fale com um especialista
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Aracaju - Sergipe
+                    </div>
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-shield-check"></i>
+                        Empresa ativa
+                    </div>
+
+                    <div class="hero-info-item">
+                        <i class="bi bi-award-fill"></i>
+                        CRC SE-000837/O
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOBRE -->
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="small-title">
+                Quem somos
+            </span>
+
+            <h2>
+                Contabilidade que entende o seu negócio
+            </h2>
+
+            <p>
+                Mais do que números, oferecemos orientação para que
+                empresários possam tomar decisões com mais segurança,
+                organização e visão estratégica.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-7">
+
+                <div class="about-card">
+
+                    <h3 class="mb-4">
+                        Barros Filhos Consultoria
+                    </h3>
+
+                    <p>
+                        A <strong>Barros Filhos Consultoria e Contabilidade LTDA</strong>
+                        atua com contabilidade, consultoria empresarial,
+                        consultoria contábil e tributária, além de serviços
+                        de apoio administrativo e desenvolvimento profissional.
+                    </p>
+
+                    <p>
+                        Nossa atuação busca aproximar a contabilidade da
+                        realidade de cada empresa, oferecendo informações
+                        organizadas e suporte para uma gestão mais eficiente.
+                    </p>
+
+                    <ul class="check-list mt-4">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Atendimento profissional e personalizado</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Orientação para decisões empresariais</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Organização contábil e administrativa</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Consultoria tributária e contábil</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="about-highlight">
+
+                    <i class="bi bi-buildings fs-1 mb-4 d-block"
+                       style="color:#e3bd67;"></i>
+
+                    <h3>
+                        Experiência para apoiar seu crescimento
+                    </h3>
+
+                    <p>
+                        Desde 23 de outubro de 2018, a empresa atua em
+                        Aracaju, Sergipe, oferecendo serviços voltados à
+                        gestão empresarial e contabilidade.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <i class="bi bi-calendar-check fs-4"
+                               style="color:#e3bd67;"></i>
+                            <div>
+                                <strong class="text-white d-block">Desde 2018</strong>
+                                <small>Atuação empresarial</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <i class="bi bi-geo-alt fs-4"
+                               style="color:#e3bd67;"></i>
+                            <div>
+                                <strong class="text-white d-block">Aracaju - SE</strong>
+                                <small>Atendimento empresarial</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-file-earmark-check fs-4"
+                               style="color:#e3bd67;"></i>
+                            <div>
+                                <strong class="text-white d-block">CRC SE-000837/O</strong>
+                                <small>Registro profissional</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ESTATÍSTICAS -->
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-0">
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <i class="bi bi-calendar2-check d-block"></i>
+                    <h3>2018</h3>
+                    <p>Início das atividades</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <i class="bi bi-building d-block"></i>
+                    <h3>EPP</h3>
+                    <p>Porte empresarial</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <i class="bi bi-briefcase d-block"></i>
+                    <h3>5+</h3>
+                    <p>Áreas de atuação</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <i class="bi bi-geo-alt d-block"></i>
+                    <h3>SE</h3>
+                    <p>Aracaju - Sergipe</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVIÇOS -->
+<section class="section section-light" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="small-title">
+                Nossas soluções
+            </span>
+
+            <h2>
+                Serviços para cuidar da sua empresa
+            </h2>
+
+            <p>
+                Uma estrutura de serviços pensada para apoiar empresários
+                nas principais necessidades contábeis, tributárias e
+                administrativas.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Organização das informações contábeis e suporte
+                        para acompanhamento da realidade financeira
+                        da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+
+                    <h4>Consultoria Tributária</h4>
+
+                    <p>
+                        Orientação relacionada à gestão tributária e
+                        apoio na compreensão das obrigações e
+                        responsabilidades empresariais.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Consultoria Empresarial</h4>
+
+                    <p>
+                        Apoio para análise de processos, organização
+                        empresarial e desenvolvimento de uma gestão
+                        mais estruturada.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Serviços Administrativos</h4>
+
+                    <p>
+                        Preparação de documentos e serviços especializados
+                        de apoio administrativo para facilitar a rotina
+                        empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <h4>Treinamento Profissional</h4>
+
+                    <p>
+                        Desenvolvimento profissional e gerencial para
+                        equipes e gestores que buscam aprimorar suas
+                        competências.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h4>Auditoria Contábil</h4>
+
+                    <p>
+                        Apoio especializado em análise e auditoria
+                        contábil e tributária, conforme as necessidades
+                        da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ATIVIDADES CNAE -->
+<section class="section" id="atividades">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="small-title">
+                Áreas de atuação
+            </span>
+
+            <h2>
+                Nossas atividades
+            </h2>
+
+            <p>
+                Conheça as principais atividades econômicas relacionadas
+                à atuação da Barros Filhos Consultoria.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <span class="cnae-number">
+                        PRINCIPAL · 70.20-4-00
+                    </span>
+
+                    <h5>
+                        Atividades de consultoria em gestão empresarial,
+                        exceto consultoria técnica específica
+                    </h5>
+
+                    <p class="mb-0 mt-3 small">
+                        Atividade principal registrada para a empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <span class="cnae-number">
+                        69.20-6-01
+                    </span>
+
+                    <h5>
+                        Atividades de contabilidade
+                    </h5>
+
+                    <p class="mb-0 mt-3 small">
+                        Serviços relacionados à área contábil.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <span class="cnae-number">
+                        69.20-6-02
+                    </span>
+
+                    <h5>
+                        Atividades de consultoria e auditoria
+                        contábil e tributária
+                    </h5>
+
+                    <p class="mb-0 mt-3 small">
+                        Consultoria e auditoria nas áreas contábil e tributária.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <span class="cnae-number">
+                        85.99-6-04
+                    </span>
+
+                    <h5>
+                        Treinamento em desenvolvimento profissional
+                        e gerencial
+                    </h5>
+
+                    <p class="mb-0 mt-3 small">
+                        Capacitação e desenvolvimento profissional.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12">
+
+                <div class="cnae-card">
+
+                    <span class="cnae-number">
+                        82.19-9-99
+                    </span>
+
+                    <h5>
+                        Preparação de documentos e serviços especializados
+                        de apoio administrativo não especificados anteriormente
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMO TRABALHAMOS -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="small-title text-uppercase"
+                      style="color:var(--secondary);letter-spacing:2px;font-weight:700;">
+                    Nosso propósito
+                </span>
+
+                <h2 class="mt-2"
+                    style="font-family:'Playfair Display',serif;font-size:42px;">
+                    Mais clareza para você administrar.
+                </h2>
+
+                <p class="mt-3">
+                    A contabilidade pode ser uma ferramenta importante
+                    para compreender o negócio. Nosso trabalho busca
+                    organizar informações e aproximá-las das decisões
+                    empresariais.
+                </p>
+
+                <a href="#contato" class="btn btn-gold mt-3">
+                    Converse conosco
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="process-item">
+
+                    <div class="process-number">01</div>
+
+                    <h5>
+                        Entendemos sua necessidade
+                    </h5>
+
+                    <p class="small">
+                        Conhecemos a realidade da empresa e suas principais
+                        demandas.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <div class="process-number">02</div>
+
+                    <h5>
+                        Organizamos as informações
+                    </h5>
+
+                    <p class="small">
+                        Trabalhamos com informações contábeis e administrativas
+                        de forma estruturada.
+                    </p>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <div class="process-number">03</div>
+
+                    <h5>
+                        Orientamos as decisões
+                    </h5>
+
+                    <p class="small">
+                        Transformamos informações em suporte para uma gestão
+                        mais consciente e organizada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta text-center">
+
+    <div class="container">
+
+        <i class="bi bi-chat-dots-fill fs-1"
+           style="color:#e3bd67;"></i>
+
+        <h2 class="mt-3">
+            Vamos conversar sobre sua empresa?
+        </h2>
+
+        <p>
+            Entre em contato com a Barros Filhos Consultoria e descubra
+            como nossos serviços podem apoiar a gestão do seu negócio.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+
+            <a href="tel:+557921075900" class="btn btn-gold btn-lg">
+                <i class="bi bi-telephone-fill me-2"></i>
+                (79) 2107-5900
+            </a>
+
+            <a href="mailto:simone@novadvocaci.site"
+               class="btn btn-outline-light-custom btn-lg">
+                <i class="bi bi-envelope-fill me-2"></i>
+                Enviar e-mail
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTATO -->
+<section class="section section-light" id="contato">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="small-title">
+                Entre em contato
+            </span>
+
+            <h2>
+                Estamos em Aracaju
+            </h2>
+
+            <p>
+                Será um prazer conversar com você sobre contabilidade,
+                consultoria e gestão empresarial.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="contact-box">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+                            <h6>Telefone</h6>
+                            <a href="tel:+557921075900">
+                                (79) 2107-5900
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+                            <h6>E-mail</h6>
+                            <a href="mailto:simone@novadvocaci.site">
+                                simone@novadvocaci.site
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <h6>Endereço</h6>
+
+                            <p>
+                                Avenida Jorge Amado, 920<br>
+                                Jardins<br>
+                                Aracaju - SE<br>
+                                CEP 49025-330
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <div>
+                            <h6>Dados empresariais</h6>
+
+                            <p>
+                                CNPJ: 31.834.874/0001-78<br>
+                                CRC: SE-000837/O<br>
+                                Situação: Ativa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Avenida+Jorge+Amado+920+Jardins+Aracaju+SE+49025-330"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-gold w-100">
+
+                        <i class="bi bi-map-fill me-2"></i>
+                        Ver localização no Google Maps
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="map-box shadow-sm">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Avenida%20Jorge%20Amado%20920%20Jardins%20Aracaju%20SE%2049025-330&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DADOS EMPRESARIAIS -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="small-title">
+                Informações institucionais
+            </span>
+
+            <h2>
+                Dados da empresa
+            </h2>
+
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>CNPJ</small>
+                    <h5 class="mt-2">31.834.874/0001-78</h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Razão Social</small>
+                    <h5 class="mt-2">
+                        Barros Filhos Consultoria e Contabilidade LTDA
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Nome Fantasia</small>
+                    <h5 class="mt-2">
+                        Barros Filhos Consultoria
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Natureza Jurídica</small>
+                    <h5 class="mt-2">
+                        Sociedade Empresária Limitada
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Porte</small>
+                    <h5 class="mt-2">
+                        Empresa de Pequeno Porte
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Regime Tributário</small>
+                    <h5 class="mt-2">
+                        Simples Nacional
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Data de abertura</small>
+                    <h5 class="mt-2">
+                        23/10/2018
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Situação cadastral</small>
+                    <h5 class="mt-2">
+                        <span class="text-success">
+                            <i class="bi bi-check-circle-fill me-1"></i>
+                            Ativa
+                        </span>
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <small>Tipo</small>
+                    <h5 class="mt-2">
+                        Matriz
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <h5>
+                    Barros Filhos Consultoria
+                </h5>
+
+                <p>
+                    Barros Filhos Consultoria e Contabilidade LTDA.
+                    Soluções em contabilidade, consultoria empresarial,
+                    tributária e apoio à gestão.
+                </p>
+
+                <div class="mt-3">
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="social-icon">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>Links rápidos</h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresa">Sobre a empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="#atividades">Atividades</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>Contato</h5>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    Avenida Jorge Amado, 920 - Jardins<br>
+                    Aracaju - SE
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    (79) 2107-5900
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    simone@novadvocaci.site
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-0">
+                © 2026 Barros Filhos Consultoria e Contabilidade LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <p class="mb-0 mt-1">
+                CNPJ 31.834.874/0001-78 · CRC SE-000837/O
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    href="https://wa.me/557921075900"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```
